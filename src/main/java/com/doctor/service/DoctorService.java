@@ -24,7 +24,7 @@ public class DoctorService {
                     + " values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement preparedStmt = con.prepareStatement(query);
 
-            preparedStmt.setString(1, doctor.getDoctor_id());
+            preparedStmt.setInt(1, doctor.getDoctor_id());
             preparedStmt.setString(2, doctor.getFirstName());
             preparedStmt.setString(3, doctor.getLastName());
             preparedStmt.setString(4, doctor.getGender());
@@ -35,9 +35,9 @@ public class DoctorService {
             preparedStmt.setString(9, doctor.getSpecialization());
             preparedStmt.setString(10, doctor.getAddress());
             preparedStmt.setString(11, doctor.getNIC());
-            preparedStmt.setString(12, doctor.getHospital_id());
-            preparedStmt.setString(13, doctor.getPatient_id());
-            preparedStmt.setString(14, doctor.getAppointment_id());
+            preparedStmt.setInt(12, doctor.getHospital_id());
+            preparedStmt.setInt(13, doctor.getPatient_id());
+            preparedStmt.setInt(14, doctor.getAppointment_id());
 
 
             preparedStmt.executeUpdate();
@@ -71,7 +71,7 @@ public class DoctorService {
             ResultSet rs = stmt.executeQuery(query);
 
             while (rs.next()) {
-                String doctor_id = rs.getString("doctor_id");
+                String doctor_id = String.valueOf(rs.getInt("doctor_id"));
                 String firstName = rs.getString("firstName");
                 String lastName = rs.getString("lastName");
                 String gender = rs.getString("gender");
@@ -82,9 +82,9 @@ public class DoctorService {
                 String specialization = rs.getString("specialization");
                 String address = rs.getString("address");
                 String NIC = rs.getString("NIC");
-                String hospital_id = rs.getString("hospital_id");
-                String patient_id = rs.getString("patient_id");
-                String appointment_id = rs.getString("appointment_id");
+                String hospital_id = String.valueOf(rs.getInt("hospital_id"));
+                String patient_id = String.valueOf(rs.getInt("patient_id"));
+                String appointment_id = String.valueOf(rs.getInt("appointment_id"));
 
 
                 output.append("<tr><td>").append(doctor_id).append("</td>");
@@ -135,7 +135,7 @@ public class DoctorService {
 
             if (rs.next()) {
                 if (rs.getInt("phone") != 0) {
-                    doctor.setDoctor_id(rs.getString("doctor_id"));
+                    doctor.setDoctor_id(rs.getInt("doctor_id"));
                     doctor.setFirstName(rs.getString("firstName"));
                     doctor.setLastName(rs.getString("lastName"));
                     doctor.setGender(rs.getString("gender"));
@@ -146,9 +146,9 @@ public class DoctorService {
                     doctor.setSpecialization(rs.getString("specialization"));
                     doctor.setAddress(rs.getString("address"));
                     doctor.setNIC(rs.getString("NIC"));
-                    doctor.setHospital_id(rs.getString("hospital_id"));
-                    doctor.setPatient_id(rs.getString("patient_id"));
-                    doctor.setAppointment_id(rs.getString("appointment_id"));
+                    doctor.setHospital_id(rs.getInt("hospital_id"));
+                    doctor.setPatient_id(rs.getInt("patient_id"));
+                    doctor.setAppointment_id(rs.getInt("appointment_id"));
 
                     System.out.println("Doctor retrieval Successful");
                     con.close();
@@ -189,10 +189,10 @@ public class DoctorService {
             preparedStmt.setString(8, doctor.getSpecialization());
             preparedStmt.setString(9, doctor.getAddress());
             preparedStmt.setString(10, doctor.getNIC());
-            preparedStmt.setString(11, doctor.getHospital_id());
-            preparedStmt.setString(12, doctor.getPatient_id());
-            preparedStmt.setString(13, doctor.getAppointment_id());
-            preparedStmt.setString(14, doctor.getDoctor_id());
+            preparedStmt.setInt(11, doctor.getHospital_id());
+            preparedStmt.setInt(12, doctor.getPatient_id());
+            preparedStmt.setInt(13, doctor.getAppointment_id());
+            preparedStmt.setInt(14, doctor.getDoctor_id());
 
             preparedStmt.executeUpdate();
             con.close();
@@ -206,7 +206,7 @@ public class DoctorService {
         return output;
     }
 
-    public String deleteItem(String doctor_id) {
+    public String deleteItem(int doctor_id) {
         DoctorDBConnection connection = new DoctorDBConnection();
         String output = "";
 
@@ -219,7 +219,7 @@ public class DoctorService {
             String query = "delete from doctors where doctor_id=?";
 
             PreparedStatement preparedStmt = con.prepareStatement(query);
-            preparedStmt.setString(1, doctor_id);
+            preparedStmt.setInt(1, doctor_id);
             preparedStmt.execute();
             con.close();
             output = "Deleted successfully";

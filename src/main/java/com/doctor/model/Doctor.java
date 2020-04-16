@@ -13,32 +13,32 @@ public class Doctor {
     private String specialization;
     private String address;
     private String NIC;
-    private String doctor_id;
-    private String hospital_id;
-    private String patient_id;
-    private String appointment_id;
+    private int doctor_id;
+    private int hospital_id;
+    private int patient_id;
+    private int appointment_id;
 
-    public String getAppointment_id() {
+    public int getAppointment_id() {
         return appointment_id;
     }
 
-    public void setAppointment_id(String appointment_id) {
+    public void setAppointment_id(int appointment_id) {
         this.appointment_id = appointment_id;
     }
 
-    public String getHospital_id() {
+    public int getHospital_id() {
         return hospital_id;
     }
 
-    public void setHospital_id(String hospital_id) {
+    public void setHospital_id(int hospital_id) {
         this.hospital_id = hospital_id;
     }
 
-    public String getPatient_id() {
+    public int getPatient_id() {
         return patient_id;
     }
 
-    public void setPatient_id(String patient_id) {
+    public void setPatient_id(int patient_id) {
         this.patient_id = patient_id;
     }
 
@@ -122,11 +122,11 @@ public class Doctor {
         this.NIC = NIC;
     }
 
-    public String getDoctor_id() {
+    public int getDoctor_id() {
         return doctor_id;
     }
 
-    public void setDoctor_id(String doctor_id) {
+    public void setDoctor_id(int doctor_id) {
         this.doctor_id = doctor_id;
     }
 

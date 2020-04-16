@@ -35,9 +35,9 @@ public class DoctorResource {
     @Path("/")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(MediaType.TEXT_PLAIN)
-    public String insertDoctor(@FormParam("doctor_id") String doctor_id, @FormParam("firstName") String firstName, @FormParam("lastName") String lastName, @FormParam("gender") String gender,
+    public String insertDoctor(@FormParam("doctor_id") int doctor_id, @FormParam("firstName") String firstName, @FormParam("lastName") String lastName, @FormParam("gender") String gender,
                                @FormParam("email") String email, @FormParam("password") String password, @FormParam("joinedDate") String joinedDate, @FormParam("phone") int phone, @FormParam("specialization") String specialization, @FormParam("address") String address,
-                               @FormParam("NIC") String NIC, @FormParam("hospital_id") String hospital_id, @FormParam("patient_id") String patient_id, @FormParam("appointment_id") String appointment_id) {
+                               @FormParam("NIC") String NIC, @FormParam("hospital_id") int hospital_id, @FormParam("patient_id") int patient_id, @FormParam("appointment_id") int appointment_id) {
 
         Doctor doctor = new Doctor();
         doctor.setDoctor_id(doctor_id);
@@ -67,7 +67,7 @@ public class DoctorResource {
         JsonObject doctorObject;
 
         doctorObject = new JsonParser().parse(doctorData).getAsJsonObject();
-        doctor.setDoctor_id(doctorObject.get("doctor_id").getAsString());
+        doctor.setDoctor_id(Integer.parseInt(doctorObject.get("doctor_id").getAsString()));
         doctor.setFirstName(doctorObject.get("firstName").getAsString());
         doctor.setLastName(doctorObject.get("lastName").getAsString());
         doctor.setGender(doctorObject.get("gender").getAsString());
@@ -78,9 +78,9 @@ public class DoctorResource {
         doctor.setSpecialization(doctorObject.get("specialization").getAsString());
         doctor.setAddress(doctorObject.get("address").getAsString());
         doctor.setNIC(doctorObject.get("NIC").getAsString());
-        doctor.setHospital_id(doctorObject.get("hospital_id").getAsString());
-        doctor.setPatient_id(doctorObject.get("patient_id").getAsString());
-        doctor.setAppointment_id(doctorObject.get("appointment_id").getAsString());
+        doctor.setHospital_id(Integer.parseInt(doctorObject.get("hospital_id").getAsString()));
+        doctor.setPatient_id(Integer.parseInt(doctorObject.get("patient_id").getAsString()));
+        doctor.setAppointment_id(Integer.parseInt(doctorObject.get("appointment_id").getAsString()));
 
         return doctorRepo.updateDoctor(doctor);
     }
@@ -93,7 +93,7 @@ public class DoctorResource {
 
         //Convert the input string to an XML document
         Document doc = Jsoup.parse(doctorData, "", Parser.xmlParser());
-        String doctor_id = doc.select("doctor_id").text();
+        int doctor_id = Integer.parseInt(doc.select("doctor_id").text());
         return doctorRepo.deleteItem(doctor_id);
     }
 }
