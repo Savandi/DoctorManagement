@@ -18,7 +18,8 @@ public class DoctorService {
 
             if (con == null) {
                 return "Error while connecting to the database for inserting.";
-            }
+            } else
+                System.out.println("DB connection established");
 
             String query = " insert into doctors (`doctor_id`,`firstName`,`lastName`,`gender`,`email`,`password`,`joinedDate`,`phone`,`specialization`,`address`,`NIC`,`hospital_id`,`patient_id`,`appointment_id`)"
                     + " values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -42,6 +43,7 @@ public class DoctorService {
 
             preparedStmt.executeUpdate();
             con.close();
+            System.out.println("DB connection closed");
             output = "Inserted successfully";
             System.out.println("Doctor inserted successfully");
 
@@ -61,7 +63,8 @@ public class DoctorService {
 
             if (con == null) {
                 return "Error while connecting to the database for reading.";
-            }
+            } else
+                System.out.println("DB connection established");
 
             output = new StringBuilder("<table border=\"1\"><tr><th>Doctor ID</th><th>First Name</th><th>Last Name</th><th>Gender</th>" +
                     "<th>Email</th><th>Password</th><th>Joined Date</th><th>Phone</th><th>Specialization</th>" +
@@ -108,6 +111,7 @@ public class DoctorService {
 
             output.append("</table>");
             System.out.println("Doctors retrieval Successful");
+            System.out.println("DB connection closed");
             con.close();
         } catch (Exception e) {
             output = new StringBuilder("Error while reading doctors.");
@@ -126,7 +130,8 @@ public class DoctorService {
 
             if (con == null) {
                 System.out.println("Error while connecting to the database for reading.");
-            }
+            } else
+                System.out.println("DB connection established");
 
             String query = "select * from doctors where doctor_id = '" + id + "'";
             assert con != null;
@@ -151,6 +156,7 @@ public class DoctorService {
                     doctor.setAppointment_id(rs.getInt("appointment_id"));
 
                     System.out.println("Doctor retrieval Successful");
+                    System.out.println("DB connection closed");
                     con.close();
                     return doctor;
                 }
@@ -174,7 +180,8 @@ public class DoctorService {
             Connection con = connection.getConnection();
             if (con == null) {
                 return "Error while connecting to the database for updating.";
-            }
+            } else
+                System.out.println("DB connection established");
 
             String query = "UPDATE doctors SET firstName=?, lastName=?, gender=?, email=?, password=?, joinedDate=?, phone=?, specialization=?, address=?, NIC=?, hospital_id=?, patient_id=?, appointment_id=? WHERE doctor_id=?";
             PreparedStatement preparedStmt = con.prepareStatement(query);
@@ -197,6 +204,7 @@ public class DoctorService {
             preparedStmt.executeUpdate();
             con.close();
             output = "Updated successfully";
+            System.out.println("DB connection closed");
             System.out.println("Update successful on doctor");
         } catch (Exception e) {
             output = "Error while updating doctor.";
@@ -214,7 +222,8 @@ public class DoctorService {
             Connection con = connection.getConnection();
             if (con == null) {
                 return "Error while connecting to the database for deleting.";
-            }
+            } else
+                System.out.println("DB connection established");
 
             String query = "delete from doctors where doctor_id=?";
 
@@ -223,6 +232,7 @@ public class DoctorService {
             preparedStmt.execute();
             con.close();
             output = "Deleted successfully";
+            System.out.println("DB connection closed");
             System.out.println("Doctor deleted successfully");
         } catch (Exception e) {
             output = "Error while deleting doctor.";
