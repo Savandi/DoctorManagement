@@ -118,7 +118,7 @@ public class DoctorService {
         return output.toString();
     }
 
-    public Doctor readDoctor(String id) {
+    public Doctor readDoctor(int id) {
 
         connection = new DoctorDBConnection();
         Doctor doctor = new Doctor();
@@ -193,7 +193,7 @@ public class DoctorService {
             preparedStmt.setString(9, doctor.getAddress());
             preparedStmt.setString(10, doctor.getNIC());
             preparedStmt.setInt(11, doctor.getHospital_id());
-            preparedStmt.setInt(14, doctor.getDoctor_id());
+            preparedStmt.setInt(12, doctor.getDoctor_id());
 
             preparedStmt.executeUpdate();
             con.close();
