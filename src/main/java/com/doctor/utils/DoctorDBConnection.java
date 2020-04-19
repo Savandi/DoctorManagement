@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DoctorDBConnection {
+
     private static Connection con = null;
 
     public DoctorDBConnection() {
