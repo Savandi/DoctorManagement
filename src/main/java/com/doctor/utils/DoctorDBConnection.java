@@ -17,7 +17,7 @@ public class DoctorDBConnection {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/paf", "root", "");
+            con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/Doctor", "root", "");
         } catch (ClassNotFoundException e){
             System.out.println("Driver Class Not Found");
         }catch (SQLException e){
@@ -37,7 +37,7 @@ public class DoctorDBConnection {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306","root","");
             Statement s = con.createStatement();
-            s.executeUpdate("CREATE DATABASE IF NOT EXISTS paf");
+            s.executeUpdate("CREATE DATABASE IF NOT EXISTS Doctor");
         }
         catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
@@ -48,7 +48,7 @@ public class DoctorDBConnection {
         String myTableName = "create table regDoctors(doctor_id INT, firstName varchar(40),lastName varchar(50),gender varchar(10),email varchar(50),password varchar(50),joinedDate varchar(30),phone INT,specialization varchar(40),address varchar(50),NIC varchar(10),hospital_id INT)";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/paf", "root", "");
+            con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/Doctor", "root", "");
             Statement s = con.createStatement();
             //The next line has the issue
             s.executeUpdate(myTableName);
