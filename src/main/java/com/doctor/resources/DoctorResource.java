@@ -27,7 +27,7 @@ public class DoctorResource {
     @GET
     @Path("doctor/{doctor_id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Doctor readDoctor(@PathParam("doctor_id") String doctor_id) {
+    public Doctor readDoctor(@PathParam("doctor_id") int doctor_id) {
         return doctorService.readDoctor(doctor_id);
     }
 
