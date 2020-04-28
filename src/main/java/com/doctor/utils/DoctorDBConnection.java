@@ -50,11 +50,13 @@ public class DoctorDBConnection {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/Doctor", "root", "");
+
             Statement s1 = con.createStatement();
             Statement s2 = con.createStatement();
             s1.executeUpdate(myTableName);
             s2.executeUpdate(myTableData);
             System.out.println("Table Created and one doctor row added");
+
         }
         catch (SQLException e ) {
             System.out.println("An error has occurred on Table Creation");
