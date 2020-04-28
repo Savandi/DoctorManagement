@@ -59,16 +59,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/doctor.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/Components/doctor.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/Components/jquery-3.2.1.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="24" selection-start-column="24" selection-end-column="24" />
+            <state relative-caret-position="45">
+              <caret line="3" column="38" lean-forward="true" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/Components/doctor.js">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/Views/bootstrap.min.css">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -114,6 +119,8 @@
       <list>
         <option value="AnnotationType" />
         <option value="Class" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -145,6 +152,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/doctor/utils/DoctorDBConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/doctor/model/Doctor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/doctor/service/DoctorService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/Components/jquery-3.2.1.min.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/Views/bootstrap.min.css" />
       </list>
     </option>
   </component>
@@ -215,6 +224,22 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="DoctorManagement" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DoctorManagement" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DoctorManagement" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DoctorManagement" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -229,6 +254,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -395,12 +421,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55301000" />
+    <option name="totallyTimeSpent" value="55588000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1454" height="827" extended-state="0" />
+    <frame x="-38" y="23" width="1478" height="827" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2733711" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26880223" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -589,6 +616,26 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Components/doctor.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Components/jquery-3.2.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="38" lean-forward="true" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/doctor.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Views/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
