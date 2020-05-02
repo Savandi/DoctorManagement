@@ -16,7 +16,5 @@ Z
 *.settings/org.eclipse.wst.common.component,1/7/172668b1e518ff61cc0661d9ebba42feeec51193
 f
 6src/main/java/com/doctor/utils/DoctorDBConnection.java,f/d/fde8408eafb36af65cd36a21b4a5112f5ecdf3f9
-J
-src/main/webapp/index.html,1/3/1337d72a3b1928dba82aa5210f5cdc0e88ce895b
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
