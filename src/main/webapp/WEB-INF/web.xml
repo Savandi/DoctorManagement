@@ -11,6 +11,14 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>DoctorsAPI</servlet-name>
+        <servlet-class>com.doctor.DoctorsAPI</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DoctorsAPI</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Jersey Web Application</servlet-name>
         <url-pattern>/webapi/*</url-pattern>
