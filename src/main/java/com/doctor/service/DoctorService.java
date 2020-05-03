@@ -89,7 +89,7 @@ public class DoctorService {
                 String hospital_id = String.valueOf(rs.getInt("hospital_id"));
 
 
-                output.append("<tr><td><input id=\"hidDoctorIDUpdate\" name=\"hidDoctorIDUpdate\" type=\"hidden\" value=\"").append(doctor_id).append("\"></td>" );
+                output.append("<tr><td>").append(doctor_id).append("</td>");
                 output.append("<td>").append(firstName).append("</td>");
                 output.append("<td>").append(lastName).append("</td>");
                 output.append("<td>").append(gender).append("</td>");
@@ -103,8 +103,7 @@ public class DoctorService {
                 output.append("<td>").append(hospital_id).append("</td>");
 
 
-                output.append("<td><input name=\"btnUpdate\" type=\"button\" value=\"Update\" class=\"btnUpdate btn btn-secondary\">" +
-                        "</td><td><form method=\"post\" action=\"doctor.jsp\"> <input name=\"hidDoctorIDDelete\" class=\"btn btn-danger\" type=\"hidden\" value=\"").append(doctor_id).append("\"></form></td></tr>");
+                output.append("<td><input name=\"btnUpdate\" type=\"button\" value=\"Update\" class=\"btn btn-secondary\"></td>" + "<td><input name=\"btnRemove\" type=\"submit\" value=\"Remove\" class=\"btn btn-danger\"></td></tr>");
             }
 
             output.append("</table>");
