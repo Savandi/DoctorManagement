@@ -92,7 +92,7 @@ public class DoctorResource {
         doctor.setNIC(doctorObject.get("NIC").getAsString());
         doctor.setHospital_id(Integer.parseInt(doctorObject.get("hospital_id").getAsString()));
 
-        return doctorService.updateDoctor(doctor);
+        return doctorService.updateDoctor(doctor.getDoctor_id(),doctor);
     }
 
     @DELETE

@@ -44,11 +44,13 @@ public class DoctorService {
             preparedStmt.executeUpdate();
             con.close();
             System.out.println("DB connection closed");
-            output = "Inserted successfully";
             System.out.println("Doctor inserted successfully");
 
+            String newDoctors = readDoctors();
+            output = "{\"status\":\"success\", \"data\": \"" + newDoctors + "\"}";
+
         } catch (Exception e) {
-            output = "Error while inserting doctor details.";
+            output = "{\"status\":\"error\", \"data\": \"Error while inserting the Doctor.\"}";
             System.out.println("Error while inserting doctor");
             System.out.println(e.getMessage());
         }
@@ -67,7 +69,7 @@ public class DoctorService {
             } else
                 System.out.println("DB connection established");
 
-            output = new StringBuilder("<table border=\"1\"><tr><th>Doctor ID</th><th>First Name</th><th>Last Name</th><th>Gender</th>" +
+            output = new StringBuilder("<table border=\'1\'><tr><th>Doctor ID</th><th>First Name</th><th>Last Name</th><th>Gender</th>" +
                     "<th>Email</th><th>Password</th><th>Joined Date</th><th>Phone</th><th>Specialization</th>" +
                     "<th>Address</th><th>NIC</th><th>Hospital ID</th><th>Update</th><th>Remove</th></tr>");
             String query = "select * from regDoctors";
@@ -89,7 +91,7 @@ public class DoctorService {
                 String hospital_id = String.valueOf(rs.getInt("hospital_id"));
 
 
-                output.append("<tr><td>").append(doctor_id).append("</td>");
+                output.append("<tr><td><input id=\'hidDoctorIDUpdate\' name=\'hidDoctorIDUpdate\' type=\'hidden\' value=\'").append(doctor_id).append("\'>").append(doctor_id).append("</td>" );
                 output.append("<td>").append(firstName).append("</td>");
                 output.append("<td>").append(lastName).append("</td>");
                 output.append("<td>").append(gender).append("</td>");
@@ -103,7 +105,8 @@ public class DoctorService {
                 output.append("<td>").append(hospital_id).append("</td>");
 
 
-                output.append("<td><input name=\"btnUpdate\" type=\"button\" value=\"Update\" class=\"btn btn-secondary\"></td>" + "<td><input name=\"btnRemove\" type=\"submit\" value=\"Remove\" class=\"btn btn-danger\"></td></tr>");
+                output.append("<td><input name=\'btnUpdate\' type=\'button\' value=\'Update\' class=\'btnUpdate btn btn-secondary\'>" +
+                        "</td><td><input name=\'btnRemove\' class=\'btnRemove btn btn-danger\' type=\'button\' value=\'Remove\' data-doctor_id=\'").append(doctor_id).append("\'></td></tr>");
             }
 
             output.append("</table>");
@@ -168,7 +171,7 @@ public class DoctorService {
     }
 
 
-    public String updateDoctor(Doctor doctor) {
+    public String updateDoctor(int ID,Doctor doctor) {
 
         connection = new DoctorDBConnection();
         String output = "";
@@ -193,15 +196,17 @@ public class DoctorService {
             preparedStmt.setString(9, doctor.getAddress());
             preparedStmt.setString(10, doctor.getNIC());
             preparedStmt.setInt(11, doctor.getHospital_id());
-            preparedStmt.setInt(12, doctor.getDoctor_id());
+            preparedStmt.setInt(12, ID);
 
             preparedStmt.executeUpdate();
             con.close();
-            output = "Updated successfully";
             System.out.println("DB connection closed");
             System.out.println("Update successful on doctor");
+            String newDoctors = readDoctors();
+            output = "{\"status\":\"success\", \"data\": \"" + newDoctors + "\"}";
+
         } catch (Exception e) {
-            output = "Error while updating doctor.";
+            output = "{\"status\":\"error\", \"data\": \"Error while updating the Doctor.\"}";
             System.out.println("Update unsuccessful on doctor");
             System.err.println(e.getMessage());
         }
@@ -226,11 +231,13 @@ public class DoctorService {
             preparedStmt.setInt(1, doctor_id);
             preparedStmt.execute();
             con.close();
-            output = "Deleted successfully";
             System.out.println("DB connection closed");
             System.out.println("Doctor deleted successfully");
+            String newDoctors = readDoctors();
+            output = "{\"status\":\"success\", \"data\": \"" + newDoctors + "\"}";
+
         } catch (Exception e) {
-            output = "Error while deleting doctor.";
+            output = "{\"status\":\"error\", \"data\": \"Error while deleting the Doctor.\"}";
             System.err.println(e.getMessage());
             System.out.println("Doctor deletion error");
         }
