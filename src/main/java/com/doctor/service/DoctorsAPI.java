@@ -2,37 +2,26 @@ package com.doctor.service;
 
 import com.doctor.model.Doctor;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.print.Doc;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
 
 @WebServlet("/DoctorsAPI")
-public class DoctorsAPI extends HttpServlet {
+public class DoctorsAPI extends javax.servlet.http.HttpServlet {
+    DoctorService doctorService = new DoctorService();
 
-    private static final long serialVersionUID = 1L;
 
-    private DoctorService doctorService = new DoctorService();
-
-    public DoctorsAPI() {
-        super();
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         //NOT USED
-
-        response.getWriter().append("Served at: ").append(request.getContextPath());
-
-
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println(request.getParameter("firstName2"));
+    protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+
 
         Doctor doctor = new Doctor();
 
@@ -49,31 +38,29 @@ public class DoctorsAPI extends HttpServlet {
         doctor.setNIC(request.getParameter("NIC2"));
         doctor.setHospital_id(Integer.parseInt(request.getParameter("hospital_id2")));
 
-
         String output = doctorService.insertDoctor(doctor);
         response.getWriter().write(output);
     }
 
-    protected void doPut(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws ServletException, IOException {
+    protected void doPut(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         Map paras = getParasMap(request);
 
-
+        System.out.println();
         Doctor doctor = new Doctor();
 
-        doctor.setDoctor_id(Integer.parseInt(String.valueOf(paras.get("doctor_id2"))));
-        doctor.setFirstName(String.valueOf(paras.get("firstName2")));
-        doctor.setLastName(String.valueOf(paras.get("lastName2")));
-        doctor.setGender(String.valueOf(paras.get("gender2")));
-        doctor.setEmail(String.valueOf(paras.get("email2")));
-        doctor.setPassword(String.valueOf(paras.get("password2")));
-        doctor.setJoinedDate(String.valueOf(paras.get("joinedDate2")));
-        doctor.setPhone(Integer.parseInt(String.valueOf(paras.get("phone2"))));
-        doctor.setSpecialization(String.valueOf(paras.get("specialization2")));
-        doctor.setAddress(String.valueOf(paras.get("address2")));
-        doctor.setNIC(String.valueOf(paras.get("NIC2")));
-        doctor.setHospital_id(Integer.parseInt(String.valueOf(paras.get("hospital_id2"))));
-
-        String output = doctorService.updateDoctor(Integer.parseInt(String.valueOf(paras.get("hidDoctorIDSave"))),doctor);
+        doctor.setDoctor_id(Integer.parseInt(((paras.get("doctor_id2").toString()))));
+        doctor.setFirstName(paras.get("firstName2").toString());
+        doctor.setLastName((paras.get("lastName2").toString()));
+        doctor.setGender((paras.get("gender2").toString()));
+        doctor.setEmail((paras.get("email2").toString()));
+        doctor.setPassword((paras.get("password2").toString()));
+        doctor.setJoinedDate((paras.get("joinedDate2").toString()));
+        doctor.setPhone(Integer.parseInt((paras.get("phone2").toString())));
+        doctor.setSpecialization((paras.get("specialization2").toString()));
+        doctor.setAddress((paras.get("address2").toString()));
+        doctor.setNIC((paras.get("NIC2").toString()));
+        doctor.setHospital_id(Integer.parseInt((paras.get("hospital_id2").toString())));
+        String output = doctorService.updateDoctor(Integer.parseInt((paras.get("hidDoctorIDSave").toString())),doctor);
 
         response.getWriter().write(output);
 

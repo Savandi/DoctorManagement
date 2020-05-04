@@ -5,7 +5,36 @@ $(document).ready(function () {
     $("#alertError").hide();
 
 
+    jQuery("#btnSave").prop('disabled', true);
+
 });
+
+function saveBtnValidation() {
+
+    var toValidate = jQuery('#doctor_id2, #firstName2, #lastName2, #email2,#password2,#gender2, #joinedDate2, #phone2, #specialization2, #address2, #NIC2, #hospital_id2'),
+        valid = false;
+    toValidate.keyup(function () {
+        if (jQuery(this).val().length > 0) {
+            jQuery(this).data('valid', true);
+        } else {
+            jQuery(this).data('valid', false);
+        }
+        toValidate.each(function () {
+            if (jQuery(this).data('valid') == true) {
+                valid = true;
+            } else {
+                valid = false;
+            }
+        });
+        if (valid === true) {
+            jQuery("#btnSave").prop('disabled', false);
+        } else {
+            jQuery("#btnSave").prop('disabled', true);
+        }
+    });
+
+}
+
 
 // SAVE ============================================
 $(document).on("click", "#btnSave", function (event) {
@@ -50,11 +79,10 @@ function onDoctorSaveComplete(response, status) {
 
         if (resultSet.status.trim() === "success") {
 
-            $("#alertSuccess").text("Successfully saved. ");
+            $("#alertSuccess").text("Successfully Saved. ");
             $("#alertSuccess").show();
             $("#divDoctorGrid").html(resultSet.data);
-        }
-        else if (resultSet.status.trim() === "error") {
+        } else if (resultSet.status.trim() === "error") {
 
             $("#alertError").text(resultSet.data);
             $("#alertError").show();
@@ -79,9 +107,10 @@ $(document).on("click", ".btnRemove", function (event) {
     $.ajax({
         url: "DoctorsAPI",
         type: "DELETE",
-        data: "doctor_id" + $(this).data(doctor_id),
+        data: "doctor_id2=" + $(this).data("doctor_id"),
         dataType: "text",
         complete: function (response, status) {
+
             onDoctorDeleteComplete(response.responseText, status);
         }
     });
@@ -97,9 +126,9 @@ function onDoctorDeleteComplete(response, status) {
 
         if (resultSet.status.trim() === "success") {
 
-            $("#alertSuccess").text("Successfully deleted.");
+            $("#alertSuccess").text("Successfully Deleted.");
             $("#alertSuccess").show();
-            $("#divItemsGrid").html(resultSet.data);
+            $("#divDoctorGrid").html(resultSet.data);
 
         } else if (resultSet.status.trim() === "error") {
             $("#alertError").text(resultSet.data);
@@ -118,7 +147,7 @@ function onDoctorDeleteComplete(response, status) {
 
 // UPDATE==========================================
 $(document).on("click", ".btnUpdate", function (event) {
-    $("#hidDoctorIDSave").val($(this).closest("tr").find('#hidDoctorIDSave').val());
+    $("#hidDoctorIDSave").val($(this).closest("tr").find('#hidDoctorIDUpdate').val());
     $("#doctor_id2").val($(this).closest("tr").find('td:eq(0)').text());
     $("#firstName2").val($(this).closest("tr").find('td:eq(1)').text());
     $("#lastName2").val($(this).closest("tr").find('td:eq(2)').text());
@@ -184,25 +213,11 @@ function validateDoctorForm() {
     if ($("#hospital_id2").val().trim() === "") {
         return "Insert Hospital ID";
     }
-
-
-    // is numerical value
-    var doctor_id = $("#doctor_id2").val().trim();
-    if (!$.isNumeric(doctor_id)) {
-        return "Insert a numerical value for Doctor ID.";
-    }
-    var phone = $("#phone2").val().trim();
-    if (!$.isNumeric(phone)) {
-        return "Insert a numerical value for Phone.";
-    }
-    var hospital_id = $("#hospital_id2").val().trim();
-    if (!$.isNumeric(hospital_id)) {
-        return "Insert a numerical value for Hospital ID.";
-    }
+    return true;
 
     //phone number length
     //if ($("#phone2").val().length !== 10 || $("#phone2").val().length !== 9){
-      //      return "Please enter a valid phone number";
+    //      return "Please enter a valid phone number";
     //}
 
     //check email

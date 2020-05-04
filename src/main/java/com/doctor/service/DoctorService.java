@@ -69,7 +69,7 @@ public class DoctorService {
             } else
                 System.out.println("DB connection established");
 
-            output = new StringBuilder("<table border=\'1\'><tr><th>Doctor ID</th><th>First Name</th><th>Last Name</th><th>Gender</th>" +
+            output = new StringBuilder("<table border=\'1\' class=\'table table-border table-hover table-striped\'><tr><th>Doctor ID</th><th>First Name</th><th>Last Name</th><th>Gender</th>" +
                     "<th>Email</th><th>Password</th><th>Joined Date</th><th>Phone</th><th>Specialization</th>" +
                     "<th>Address</th><th>NIC</th><th>Hospital ID</th><th>Update</th><th>Remove</th></tr>");
             String query = "select * from regDoctors";
@@ -91,7 +91,7 @@ public class DoctorService {
                 String hospital_id = String.valueOf(rs.getInt("hospital_id"));
 
 
-                output.append("<tr><td><input id=\'hidDoctorIDUpdate\' name=\'hidDoctorIDUpdate\' type=\'hidden\' value=\'").append(doctor_id).append("\'>").append(doctor_id).append("</td>" );
+                output.append("<tr><td><input id=\'hidDoctorIDUpdate\' name=\'hidDoctorIDUpdate\' type=\'hidden\' value=\'").append(doctor_id).append("\'>").append(doctor_id).append("</td>");
                 output.append("<td>").append(firstName).append("</td>");
                 output.append("<td>").append(lastName).append("</td>");
                 output.append("<td>").append(gender).append("</td>");
@@ -105,8 +105,8 @@ public class DoctorService {
                 output.append("<td>").append(hospital_id).append("</td>");
 
 
-                output.append("<td><input name=\'btnUpdate\' type=\'button\' value=\'Update\' class=\'btnUpdate btn btn-secondary\'>" +
-                        "</td><td><input name=\'btnRemove\' class=\'btnRemove btn btn-danger\' type=\'button\' value=\'Remove\' data-doctor_id=\'").append(doctor_id).append("\'></td></tr>");
+                output.append("<td><input name=\'btnUpdate\' type=\'button\' value='Update' class='btnUpdate btn btn-secondary'>" +
+                        "</td><td><input name='btnRemove' class='btnRemove btn btn-danger' type='button' value='Remove' data-doctor_id='").append(doctor_id).append("'></td></tr>");
             }
 
             output.append("</table>");
@@ -171,7 +171,7 @@ public class DoctorService {
     }
 
 
-    public String updateDoctor(int ID,Doctor doctor) {
+    public String updateDoctor(int ID, Doctor doctor) {
 
         connection = new DoctorDBConnection();
         String output = "";
@@ -233,6 +233,7 @@ public class DoctorService {
             con.close();
             System.out.println("DB connection closed");
             System.out.println("Doctor deleted successfully");
+
             String newDoctors = readDoctors();
             output = "{\"status\":\"success\", \"data\": \"" + newDoctors + "\"}";
 
