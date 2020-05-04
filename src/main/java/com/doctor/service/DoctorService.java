@@ -69,9 +69,9 @@ public class DoctorService {
             } else
                 System.out.println("DB connection established");
 
-            output = new StringBuilder("<table border=\'1\' class=\'table table-border table-hover table-striped\'><tr><th>Doctor ID</th><th>First Name</th><th>Last Name</th><th>Gender</th>" +
-                    "<th>Email</th><th>Password</th><th>Joined Date</th><th>Phone</th><th>Specialization</th>" +
-                    "<th>Address</th><th>NIC</th><th>Hospital ID</th><th>Update</th><th>Remove</th></tr>");
+            output = new StringBuilder("<table border=\'1\' class=\'table table-border table-hover table-striped\'><tr><th style=\'background-color: #5a1dc736\'>Doctor ID</th><th style=\'background-color: #5a1dc736\'>First Name</th><th style=\'background-color: #5a1dc736\'>Last Name</th><th style=\'background-color: #5a1dc736\'>Gender</th>" +
+                    "<th style=\'background-color: #5a1dc736\'>Email</th><th style=\'background-color: #5a1dc736\'>Password</th><th style=\'background-color: #5a1dc736\'>Joined Date</th><th style=\'background-color: #5a1dc736\'>Phone</th><th style=\'background-color: #5a1dc736\'>Specialization</th>" +
+                    "<th style=\'background-color: #5a1dc736\'>Address</th><th style=\'background-color: #5a1dc736\'>NIC</th><th style=\'background-color: #5a1dc736\'>Hospital ID</th><th style=\'background-color: #5a1dc736\'>Update</th><th style=\'background-color: #5a1dc736\'>Remove</th></tr>");
             String query = "select * from regDoctors";
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(query);
