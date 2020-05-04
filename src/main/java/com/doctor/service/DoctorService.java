@@ -69,7 +69,7 @@ public class DoctorService {
             } else
                 System.out.println("DB connection established");
 
-            output = new StringBuilder("<table border=\'1\' class=\'table table-border table-hover table-striped\'><tr><th style=\'background-color: #5a1dc736\'>Doctor ID</th><th style=\'background-color: #5a1dc736\'>First Name</th><th style=\'background-color: #5a1dc736\'>Last Name</th><th style=\'background-color: #5a1dc736\'>Gender</th>" +
+            output = new StringBuilder("<table border=\'2\' class=\'table table-border table-hover table-striped\'><tr><th style=\'background-color: #5a1dc736\'>Doctor ID</th><th style=\'background-color: #5a1dc736\'>First Name</th><th style=\'background-color: #5a1dc736\'>Last Name</th><th style=\'background-color: #5a1dc736\'>Gender</th>" +
                     "<th style=\'background-color: #5a1dc736\'>Email</th><th style=\'background-color: #5a1dc736\'>Password</th><th style=\'background-color: #5a1dc736\'>Joined Date</th><th style=\'background-color: #5a1dc736\'>Phone</th><th style=\'background-color: #5a1dc736\'>Specialization</th>" +
                     "<th style=\'background-color: #5a1dc736\'>Address</th><th style=\'background-color: #5a1dc736\'>NIC</th><th style=\'background-color: #5a1dc736\'>Hospital ID</th><th style=\'background-color: #5a1dc736\'>Update</th><th style=\'background-color: #5a1dc736\'>Remove</th></tr>");
             String query = "select * from regDoctors";
@@ -105,7 +105,7 @@ public class DoctorService {
                 output.append("<td>").append(hospital_id).append("</td>");
 
 
-                output.append("<td><input name=\'btnUpdate\' type=\'button\' value='Update' class='btnUpdate btn btn-secondary'>" +
+                output.append("<td><input name=\'btnUpdate\' type=\'button\' value='Update' class='btnUpdate btn btn-warning'>" +
                         "</td><td><input name='btnRemove' class='btnRemove btn btn-danger' type='button' value='Remove' data-doctor_id='").append(doctor_id).append("'></td></tr>");
             }
 

@@ -3,37 +3,7 @@ $(document).ready(function () {
         $("#alertSuccess").hide();
     }
     $("#alertError").hide();
-
-
-    jQuery("#btnSave").prop('disabled', true);
-
 });
-
-function saveBtnValidation() {
-
-    var toValidate = jQuery('#doctor_id2, #firstName2, #lastName2, #email2,#password2,#gender2, #joinedDate2, #phone2, #specialization2, #address2, #NIC2, #hospital_id2'),
-        valid = false;
-    toValidate.keyup(function () {
-        if (jQuery(this).val().length > 0) {
-            jQuery(this).data('valid', true);
-        } else {
-            jQuery(this).data('valid', false);
-        }
-        toValidate.each(function () {
-            if (jQuery(this).data('valid') == true) {
-                valid = true;
-            } else {
-                valid = false;
-            }
-        });
-        if (valid === true) {
-            jQuery("#btnSave").prop('disabled', false);
-        } else {
-            jQuery("#btnSave").prop('disabled', true);
-        }
-    });
-
-}
 
 
 // SAVE ============================================
@@ -81,6 +51,7 @@ function onDoctorSaveComplete(response, status) {
 
             $("#alertSuccess").text("Successfully Saved. ");
             $("#alertSuccess").show();
+            $("#formDoctor")[0].reset();
             $("#divDoctorGrid").html(resultSet.data);
         } else if (resultSet.status.trim() === "error") {
 
@@ -97,7 +68,7 @@ function onDoctorSaveComplete(response, status) {
         $("#alertError").show();
     }
     $("#hidDoctorIDSave").val("");
-    $("#formDoctor")[0].reset();
+
 
 }
 
@@ -213,16 +184,42 @@ function validateDoctorForm() {
     if ($("#hospital_id2").val().trim() === "") {
         return "Insert Hospital ID";
     }
+    //check email
+    var regex = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+
+    if (!(regex.test($("#email2").val()))) {
+        return "Insert a valid email";
+    }
     return true;
 
     //phone number length
     //if ($("#phone2").val().length !== 10 || $("#phone2").val().length !== 9){
     //      return "Please enter a valid phone number";
     //}
-
-    //check email
-    // var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    // if (!(regex.test($("#email2").val()))) {
-    //     return "Insert a valid email";
-    // }
 }
+
+// function saveBtnValidation() {
+//
+//     var toValidate = jQuery('#doctor_id2, #firstName2, #lastName2, #email2,#password2,#gender2, #joinedDate2, #phone2, #specialization2, #address2, #NIC2, #hospital_id2'),
+//         valid = false;
+//     toValidate.keyup(function () {
+//         if (jQuery(this).val().length > 0) {
+//             jQuery(this).data('valid', true);
+//         } else {
+//             jQuery(this).data('valid', false);
+//         }
+//         toValidate.each(function () {
+//             if (jQuery(this).data('valid') == true) {
+//                 valid = true;
+//             } else {
+//                 valid = false;
+//             }
+//         });
+//         if (valid === true) {
+//             jQuery("#btnSave").prop('disabled', false);
+//         } else {
+//             jQuery("#btnSave").prop('disabled', true);
+//         }
+//     });
+//
+// }
