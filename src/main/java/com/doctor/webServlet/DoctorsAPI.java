@@ -23,7 +23,6 @@ public class DoctorsAPI extends javax.servlet.http.HttpServlet {
 
         Doctor doctor = new Doctor();
 
-        doctor.setDoctor_id(Integer.parseInt(request.getParameter("doctor_id2")));
         doctor.setFirstName(request.getParameter("firstName2"));
         doctor.setLastName(request.getParameter("lastName2"));
         doctor.setGender(request.getParameter("gender2"));
@@ -47,7 +46,6 @@ public class DoctorsAPI extends javax.servlet.http.HttpServlet {
 
         Doctor doctor = new Doctor();
 
-        doctor.setDoctor_id(Integer.parseInt(((paras.get("doctor_id2").toString().replace("+"," ")))));
         doctor.setFirstName(paras.get("firstName2").toString().replace("+"," "));
         doctor.setLastName((paras.get("lastName2").toString()).replace("+"," "));
         doctor.setGender((paras.get("gender2").toString().replace("+"," ")));

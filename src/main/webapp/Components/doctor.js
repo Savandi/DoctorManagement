@@ -119,7 +119,6 @@ function onDoctorDeleteComplete(response, status) {
 // UPDATE==========================================
 $(document).on("click", ".btnUpdate", function (event) {
     $("#hidDoctorIDSave").val($(this).closest("tr").find('#hidDoctorIDUpdate').val());
-    $("#doctor_id2").val($(this).closest("tr").find('td:eq(0)').text());
     $("#firstName2").val($(this).closest("tr").find('td:eq(1)').text());
     $("#lastName2").val($(this).closest("tr").find('td:eq(2)').text());
     $("#gender2").val($(this).closest("tr").find('td:eq(3)').text());
@@ -136,10 +135,6 @@ $(document).on("click", ".btnUpdate", function (event) {
 
 // CLIENT- MODEL=========================================================================
 function validateDoctorForm() {
-    // DOCTORID
-    if ($("#doctor_id2").val().trim() === "") {
-        return "Insert Doctor ID.";
-    }
     // FIRSTNAME
     if ($("#firstName2").val().trim() === "") {
         return "Insert First Name";

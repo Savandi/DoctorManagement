@@ -26,9 +26,6 @@
         <div class="col-6" style="margin-left:25%">
             <form id="formDoctor" style="color: #6f42c1;  font-weight: bold" name="formDoctor" method="post"
                   action="doctor.jsp" >
-                <!-- DOCTOR ID -->
-                ID:
-                <input type="number" id="doctor_id2" name="doctor_id2" class="form-control form-control-sm">
                 <!-- FIRSTNAME -->
                 <br>
                 First Name:

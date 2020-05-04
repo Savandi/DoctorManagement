@@ -2,8 +2,12 @@ package com.doctor.service;
 
 import com.doctor.model.Doctor;
 import com.doctor.utils.DoctorDBConnection;
+import com.doctor.utils.DoctorIDValidate;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class DoctorService {
 
@@ -23,11 +27,13 @@ public class DoctorService {
             } else
                 System.out.println("DB connection established");
 
+            int docID = DoctorIDValidate.generateDoctorIDs((ArrayList<Integer>) getDocID());
+
             String query = " insert into regDoctors (`doctor_id`,`firstName`,`lastName`,`gender`,`email`,`password`,`joinedDate`,`phone`,`specialization`,`address`,`NIC`,`hospital_id`)"
                     + " values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement preparedStmt = con.prepareStatement(query);
 
-            preparedStmt.setInt(1, doctor.getDoctor_id());
+            preparedStmt.setInt(1, docID);
             preparedStmt.setString(2, doctor.getFirstName());
             preparedStmt.setString(3, doctor.getLastName());
             preparedStmt.setString(4, doctor.getGender());
@@ -280,5 +286,23 @@ public class DoctorService {
             output = "No such doctor in system";
         }
         return output;
+    }
+
+
+    private List<Integer> getDocID() throws SQLException {
+        List<Integer> arrayList = null;
+        try {
+            arrayList = new ArrayList<>();
+            String query = "SELECT doctor_id FROM regDoctors";
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
+
+            while (rs.next()) {
+                arrayList.add(rs.getInt(1));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return arrayList;
     }
 }
