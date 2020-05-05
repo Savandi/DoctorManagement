@@ -10,7 +10,7 @@ public class GetDate {
         StringBuilder formatDate = new StringBuilder();
         formatDate.append("<input type='text' id='joinedDate2' name='joinedDate2' class='form-control form-control-sm' value='");
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-        formatDate.append(format.format(date)).append("' readonly='readonly'>");
+        formatDate.append(format.format(date)).append("' readonly='readonly' placeholder='Joined Date'>");
 
      return formatDate.toString();
     }

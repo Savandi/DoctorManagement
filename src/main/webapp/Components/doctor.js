@@ -121,7 +121,13 @@ $(document).on("click", ".btnUpdate", function (event) {
     $("#hidDoctorIDSave").val($(this).closest("tr").find('#hidDoctorIDUpdate').val());
     $("#firstName2").val($(this).closest("tr").find('td:eq(1)').text());
     $("#lastName2").val($(this).closest("tr").find('td:eq(2)').text());
-    $("#gender2").val($(this).closest("tr").find('td:eq(3)').text());
+
+    if($(this).closest("tr").find('td:eq(3)').text() === "Female")
+        $("#female").prop("checked", true);
+    else if($(this).closest("tr").find('td:eq(3)').text() === "Male")
+        $("#male").prop("checked", true);
+
+
     $("#email2").val($(this).closest("tr").find('td:eq(4)').text());
     $("#password2").val($(this).closest("tr").find('td:eq(5)').text());
     $("#joinedDate2").val($(this).closest("tr").find('td:eq(6)').text());
@@ -130,6 +136,7 @@ $(document).on("click", ".btnUpdate", function (event) {
     $("#address2").val($(this).closest("tr").find('td:eq(9)').text());
     $("#NIC2").val($(this).closest("tr").find('td:eq(10)').text());
     $("#hospital_id2").val($(this).closest("tr").find('td:eq(11)').text());
+    $("#firstName2").focus();
 
 });
 
@@ -143,10 +150,11 @@ function validateDoctorForm() {
     if ($("#lastName2").val().trim() === "") {
         return "Insert Last Name";
     }
-    // GENDER
-    if ($("#gender2").val().trim() === "") {
-        return "Insert Gender";
+    //GENDER
+    if ($('input[name="gender"]:checked').length === 0) {
+        return "Select gender.";
     }
+
     // EMAIL
     if ($("#email2").val().trim() === "") {
         return "Insert Email";
@@ -179,42 +187,27 @@ function validateDoctorForm() {
     if ($("#hospital_id2").val().trim() === "") {
         return "Insert Hospital ID";
     }
-    //check email
-    var regex = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+    //check email validation
+    var regexEmail = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
 
-    if (!(regex.test($("#email2").val()))) {
+    if (!(regexEmail.test($("#email2").val()))) {
         return "Insert a valid email";
     }
-    return true;
+    //check phone validation
+    // //supports formats from below
+    // (123) 456 7899
+    // (123).456.7899
+    // (123)-456-7899
+    // 123-456-7899
+    // 123 456 7899
+    // 1234567899
+    var regexPhone = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
 
-    //phone number length
-    //if ($("#phone2").val().length !== 10 || $("#phone2").val().length !== 9){
-    //      return "Please enter a valid phone number";
-    //}
+    if (!(regexPhone.test($("#phone2").val()))) {
+        return "Insert a valid contact number";
+    }
+
+    return true;
 }
 
-// function saveBtnValidation() {
-//
-//     var toValidate = jQuery('#doctor_id2, #firstName2, #lastName2, #email2,#password2,#gender2, #joinedDate2, #phone2, #specialization2, #address2, #NIC2, #hospital_id2'),
-//         valid = false;
-//     toValidate.keyup(function () {
-//         if (jQuery(this).val().length > 0) {
-//             jQuery(this).data('valid', true);
-//         } else {
-//             jQuery(this).data('valid', false);
-//         }
-//         toValidate.each(function () {
-//             if (jQuery(this).data('valid') == true) {
-//                 valid = true;
-//             } else {
-//                 valid = false;
-//             }
-//         });
-//         if (valid === true) {
-//             jQuery("#btnSave").prop('disabled', false);
-//         } else {
-//             jQuery("#btnSave").prop('disabled', true);
-//         }
-//     });
-//
-// }
+

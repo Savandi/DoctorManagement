@@ -23,9 +23,16 @@ public class DoctorsAPI extends javax.servlet.http.HttpServlet {
 
         Doctor doctor = new Doctor();
 
+
         doctor.setFirstName(request.getParameter("firstName2"));
         doctor.setLastName(request.getParameter("lastName2"));
-        doctor.setGender(request.getParameter("gender2"));
+        String gender = request.getParameter("gender");
+
+        if ("Male".equals(gender)) {
+            doctor.setGender("Male");
+        } else if ("Female".equals(gender))
+            doctor.setGender("Female");
+
         doctor.setEmail(request.getParameter("email2"));
         doctor.setPassword(request.getParameter("password2"));
         doctor.setJoinedDate(request.getParameter("joinedDate2"));
@@ -34,7 +41,6 @@ public class DoctorsAPI extends javax.servlet.http.HttpServlet {
         doctor.setAddress(request.getParameter("address2"));
         doctor.setNIC(request.getParameter("NIC2"));
         doctor.setHospital_id(Integer.parseInt(request.getParameter("hospital_id2")));
-
 
 
         String output = doctorService.insertDoctor(doctor);
@@ -46,18 +52,18 @@ public class DoctorsAPI extends javax.servlet.http.HttpServlet {
 
         Doctor doctor = new Doctor();
 
-        doctor.setFirstName(paras.get("firstName2").toString().replace("+"," "));
-        doctor.setLastName((paras.get("lastName2").toString()).replace("+"," "));
-        doctor.setGender((paras.get("gender2").toString().replace("+"," ")));
-        doctor.setEmail((paras.get("email2").toString().replace("%40","@").replace("+"," ")));
-        doctor.setPassword((paras.get("password2").toString().replace("+"," ")));
-        doctor.setJoinedDate((paras.get("joinedDate2").toString().replace("+"," ")));
-        doctor.setPhone(Integer.parseInt((paras.get("phone2").toString().replace("+"," "))));
-        doctor.setSpecialization((paras.get("specialization2").toString().replace("+"," ")));
-        doctor.setAddress((paras.get("address2").toString().replace("+"," ")));
-        doctor.setNIC((paras.get("NIC2").toString().replace("+"," ")));
-        doctor.setHospital_id(Integer.parseInt((paras.get("hospital_id2").toString().replace("+"," "))));
-        String output = doctorService.updateDoctor(Integer.parseInt((paras.get("hidDoctorIDSave").toString().replace("+"," "))),doctor);
+        doctor.setFirstName(paras.get("firstName2").toString().replace("+", " "));
+        doctor.setLastName((paras.get("lastName2").toString()).replace("+", " "));
+        doctor.setGender((paras.get("gender").toString().replace("+", " ")));
+        doctor.setEmail((paras.get("email2").toString().replace("%40", "@").replace("+", " ")));
+        doctor.setPassword((paras.get("password2").toString().replace("+", " ")));
+        doctor.setJoinedDate((paras.get("joinedDate2").toString().replace("+", " ")));
+        doctor.setPhone(Integer.parseInt((paras.get("phone2").toString().replace("+", " "))));
+        doctor.setSpecialization((paras.get("specialization2").toString().replace("+", " ")));
+        doctor.setAddress((paras.get("address2").toString().replace("+", " ")));
+        doctor.setNIC((paras.get("NIC2").toString().replace("+", " ")));
+        doctor.setHospital_id(Integer.parseInt((paras.get("hospital_id2").toString().replace("+", " "))));
+        String output = doctorService.updateDoctor(Integer.parseInt((paras.get("hidDoctorIDSave").toString().replace("+", " "))), doctor);
 
         response.getWriter().write(output);
 
