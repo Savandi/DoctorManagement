@@ -8,6 +8,14 @@ $(document).ready(function () {
 
 // SAVE ============================================
 $(document).on("click", "#btnSave", function (event) {
+    // Form validation-------------------
+    var status = validateDoctorForm();
+
+    if (status !== true) {
+        $("#alertError").text(status);
+        $("#alertError").show();
+        return;
+    }
 
     if (!($("#confPassword").val() === $("#password2").val())) {
         $("#alertError").text("Password does not match");
@@ -20,15 +28,6 @@ $(document).on("click", "#btnSave", function (event) {
         $("#alertError").text("");
         $("#alertError").hide();
 
-
-// Form validation-------------------
-        var status = validateDoctorForm();
-
-        if (status !== true) {
-            $("#alertError").text(status);
-            $("#alertError").show();
-            return;
-        }
 
 // If valid------------------------
         var type = ($("#hidDoctorIDSave").val() === "") ? "POST" : "PUT";
@@ -137,6 +136,7 @@ $(document).on("click", ".btnUpdate", function (event) {
 
     $("#email2").val($(this).closest("tr").find('td:eq(4)').text());
     $("#password2").val($(this).closest("tr").find('td:eq(5)').text());
+    $("#confPassword").val($(this).closest("tr").find('td:eq(5)').text());
     $("#joinedDate2").val($(this).closest("tr").find('td:eq(6)').text());
     $("#phone2").val($(this).closest("tr").find('td:eq(7)').text());
     $("#specialization2").val($(this).closest("tr").find('td:eq(8)').text());
@@ -169,6 +169,10 @@ function validateDoctorForm() {
     // PASSWORD
     if ($("#password2").val().trim() === "") {
         return "Insert Password";
+    }
+    // CONFIRM PASSWORD
+    if ($("#confPassword").val().trim() === "") {
+        return "Confirm Password";
     }
     // NIC
     if ($("#NIC2").val().trim() === "") {
