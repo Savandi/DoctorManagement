@@ -86,7 +86,7 @@
                         <!-- PHONE -->
                         Contact Number:
                         <input type="number" id="phone2" name="phone2" class="form-control form-control-sm"
-                               placeholder="Phone"></div>
+                               placeholder="Phone" maxlength="11"></div>
                     <br>
                 </div>
                 <div class="row">

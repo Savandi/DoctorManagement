@@ -8,38 +8,45 @@ $(document).ready(function () {
 
 // SAVE ============================================
 $(document).on("click", "#btnSave", function (event) {
-// Clear alerts---------------------
-    $("#alertSuccess").text("");
-    $("#alertSuccess").hide();
-    $("#alertError").text("");
-    $("#alertError").hide();
+
+    if (!($("#confPassword").val() === $("#password2").val())) {
+        $("#alertError").text("Password does not match");
+        $("#alertError").show();
+        $("#alertSuccess").hide();
+    } else {
+        // Clear alerts---------------------
+        $("#alertSuccess").text("");
+        $("#alertSuccess").hide();
+        $("#alertError").text("");
+        $("#alertError").hide();
 
 
 // Form validation-------------------
-    var status = validateDoctorForm();
+        var status = validateDoctorForm();
 
-    if (status !== true) {
-        $("#alertError").text(status);
-        $("#alertError").show();
-        return;
-    }
+        if (status !== true) {
+            $("#alertError").text(status);
+            $("#alertError").show();
+            return;
+        }
 
 // If valid------------------------
-    var type = ($("#hidDoctorIDSave").val() === "") ? "POST" : "PUT";
+        var type = ($("#hidDoctorIDSave").val() === "") ? "POST" : "PUT";
 
-    $.ajax(
-        {
-            url: "DoctorsAPI",
-            type: type,
-            data: $("#formDoctor").serialize(),
-            dataType: "text",
-            complete: function (response, status) {
+        $.ajax(
+            {
+                url: "DoctorsAPI",
+                type: type,
+                data: $("#formDoctor").serialize(),
+                dataType: "text",
+                complete: function (response, status) {
 
-                onDoctorSaveComplete(response.responseText, status);
+                    onDoctorSaveComplete(response.responseText, status);
 
-            }
+                }
+            });
+    }
 
-        });
 });
 
 function onDoctorSaveComplete(response, status) {
@@ -122,9 +129,9 @@ $(document).on("click", ".btnUpdate", function (event) {
     $("#firstName2").val($(this).closest("tr").find('td:eq(1)').text());
     $("#lastName2").val($(this).closest("tr").find('td:eq(2)').text());
 
-    if($(this).closest("tr").find('td:eq(3)').text() === "Female")
+    if ($(this).closest("tr").find('td:eq(3)').text() === "Female")
         $("#female").prop("checked", true);
-    else if($(this).closest("tr").find('td:eq(3)').text() === "Male")
+    else if ($(this).closest("tr").find('td:eq(3)').text() === "Male")
         $("#male").prop("checked", true);
 
 
@@ -163,25 +170,25 @@ function validateDoctorForm() {
     if ($("#password2").val().trim() === "") {
         return "Insert Password";
     }
-    // JOINEDDATE
-    if ($("#joinedDate2").val().trim() === "") {
-        return "Insert Joined Date";
+    // NIC
+    if ($("#NIC2").val().trim() === "") {
+        return "Insert NIC";
     }
     // PHONE
     if ($("#phone2").val().trim() === "") {
         return "Insert Contact Number";
     }
-    // SPECIALIZATION
-    if ($("#specialization2").val().trim() === "") {
-        return "Insert Specialization";
-    }
     // ADDRESS
     if ($("#address2").val().trim() === "") {
         return "Insert Address";
     }
-    // NIC
-    if ($("#NIC2").val().trim() === "") {
-        return "Insert NIC";
+    // SPECIALIZATION
+    if ($("#specialization2").val().trim() === "") {
+        return "Insert Specialization";
+    }
+    // JOINEDDATE
+    if ($("#joinedDate2").val().trim() === "") {
+        return "Insert Joined Date";
     }
     // HOSPITALID
     if ($("#hospital_id2").val().trim() === "") {
@@ -194,18 +201,19 @@ function validateDoctorForm() {
         return "Insert a valid email";
     }
     //check phone validation
-    // //supports formats from below
+    //supports formats from below
     // (123) 456 7899
     // (123).456.7899
     // (123)-456-7899
     // 123-456-7899
     // 123 456 7899
     // 1234567899
-    var regexPhone = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
 
-    if (!(regexPhone.test($("#phone2").val()))) {
+
+    if ($("#phone2").val().length > 11 || $("#phone2").val().length < 7) {
         return "Insert a valid contact number";
     }
+
 
     return true;
 }

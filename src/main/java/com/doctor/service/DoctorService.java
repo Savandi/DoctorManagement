@@ -75,9 +75,9 @@ public class DoctorService {
             } else
                 System.out.println("DB connection established");
 
-            output = new StringBuilder("<table border=\'1\' class=\'table table-border table-hover\' style=\'background-color: white\'> <tr><thead class=\'thead-dark\'><th style=\'background-color: #5a1dc736\'>Doctor ID</th><th style=\'background-color: #5a1dc736\'>First Name</th><th style=\'background-color: #5a1dc736\'>Last Name</th><th style=\'background-color: #5a1dc736\'>Gender</th>" +
-                    "<th style=\'background-color: #5a1dc736\'>Email</th><th style=\'background-color: #5a1dc736\'>Password</th><th style=\'background-color: #5a1dc736\'>Joined Date</th><th style=\'background-color: #5a1dc736\'>Phone</th><th style=\'background-color: #5a1dc736\'>Specialization</th>" +
-                    "<th style=\'background-color: #5a1dc736\'>Address</th><th style=\'background-color: #5a1dc736\'>NIC</th><th style=\'background-color: #5a1dc736\'>Hospital ID</th><th style=\'background-color: #5a1dc736\'>Update</th><th style=\'background-color: #5a1dc736\'>Remove</th></thead></tr>");
+            output = new StringBuilder("<table border=\'1\' class=\'table table-border table-hover\' style=\'background-color: white\'> <tr><th style=\'background-color: #5a1dc736; color: black\'>Doctor ID</th><th style=\'background-color: #5a1dc736; color: black\'>First Name</th><th style=\'background-color: #5a1dc736; color: black\'>Last Name</th><th style=\'background-color: #5a1dc736; color: black\'>Gender</th>" +
+                    "<th style=\'background-color: #5a1dc736; color: black\'>Email</th><th style=\'background-color: #5a1dc736; color: black\'>Password</th><th style=\'background-color: #5a1dc736; color: black\'>Joined Date</th><th style=\'background-color: #5a1dc736; color: black\'>Phone</th><th style=\'background-color: #5a1dc736; color: black\'>Specialization</th>" +
+                    "<th style=\'background-color: #5a1dc736; color: black\'>Address</th><th style=\'background-color: #5a1dc736; color: black\'>NIC</th><th style=\'background-color: #5a1dc736; color: black\'>Hospital ID</th><th style=\'background-color: #5a1dc736; color: black\'>Update</th><th style=\'background-color: #5a1dc736; color: black\'>Remove</thead></tr>");
             String query = "select * from regDoctors";
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(query);
