@@ -6,10 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21a8ef34-5e9c-4d24-a83f-c4ae2c7194a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Components/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Components/doctor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/doctor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/doctor.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="21a8ef34-5e9c-4d24-a83f-c4ae2c7194a3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -188,53 +185,6 @@
               <item name="DoctorManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DoctorManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DoctorManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DoctorManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DoctorManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="doctor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DoctorManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DoctorManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="doctor" type="462c0819:PsiDirectoryNode" />
-              <item name="webServlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DoctorManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DoctorManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DoctorManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DoctorManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DoctorManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DoctorManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="Views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -433,7 +383,7 @@
       <workItem from="1587031076964" duration="251000" />
       <workItem from="1587032697304" duration="1804000" />
       <workItem from="1587035394894" duration="152000" />
-      <workItem from="1588699597759" duration="3599000" />
+      <workItem from="1588699597759" duration="4051000" />
     </task>
     <task id="LOCAL-00001" summary="Doctor Management REST API creation">
       <created>1586978272642</created>
@@ -474,7 +424,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143478000" />
+    <option name="totallyTimeSpent" value="143930000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -487,9 +437,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="23" width="1440" height="827" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.85046726" visible="true" weight="0.14091559" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.85046726" visible="true" weight="0.30829757" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -500,7 +449,7 @@
       <window_info anchor="bottom" id="SonarLint" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292517" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.06394558" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.06394558" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.8435374" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
