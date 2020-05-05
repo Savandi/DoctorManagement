@@ -1,0 +1,5 @@
+
+‘
+java:S1319"tThe type of the "arrayList" object should be an interface such as "List" rather than the implementation "ArrayList".(Õ„™õ8 ÎØ†ž.
+W
+java:S1118":Add a private constructor to hide the implicit public one.(º• ¸8 ÎØ†ž.

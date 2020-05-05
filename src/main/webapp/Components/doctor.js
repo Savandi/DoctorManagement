@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 
 
-// SAVE ============================================
+// SAVE ==========================================================
 $(document).on("click", "#btnSave", function (event) {
     // Form validation-------------------
     var status = validateDoctorForm();
@@ -75,7 +75,7 @@ function onDoctorSaveComplete(response, status) {
 
 }
 
-//DELETE
+//DELETE=================================================
 $(document).on("click", ".btnRemove", function (event) {
     $.ajax({
         url: "DoctorsAPI",
@@ -125,17 +125,17 @@ function onDoctorDeleteComplete(response, status) {
 
 // UPDATE==========================================
 $(document).on("click", ".btnUpdate", function (event) {
+    //clear alerts
+    $("#alertSuccess").hide();
+    $("#alertError").hide();
 
     $("#hidDoctorIDSave").val($(this).closest("tr").find('#hidDoctorIDUpdate').val());
     $("#firstName2").val($(this).closest("tr").find('td:eq(1)').text());
     $("#lastName2").val($(this).closest("tr").find('td:eq(2)').text());
-
     if ($(this).closest("tr").find('td:eq(3)').text() === "Female")
         $("#female").prop("checked", true);
     else if ($(this).closest("tr").find('td:eq(3)').text() === "Male")
         $("#male").prop("checked", true);
-
-
     $("#email2").val($(this).closest("tr").find('td:eq(4)').text());
     $("#password2").val($(this).closest("tr").find('td:eq(5)').text());
     $("#confPassword").val($(this).closest("tr").find('td:eq(5)').text());
@@ -147,6 +147,13 @@ $(document).on("click", ".btnUpdate", function (event) {
     $("#hospital_id2").val($(this).closest("tr").find('td:eq(11)').text());
     $("#firstName2").focus();
 
+});
+
+//RESET================================================================================
+$(document).on("click", ".btnReset", function (event) {
+    $("#alertSuccess").hide();
+    $("#alertError").hide();
+    $("#formDoctor")[0].reset();
 });
 
 // CLIENT- MODEL=========================================================================
@@ -223,5 +230,3 @@ function validateDoctorForm() {
 
     return true;
 }
-
-

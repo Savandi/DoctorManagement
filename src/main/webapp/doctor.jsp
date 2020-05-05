@@ -14,9 +14,11 @@
 </head>
 <body>
 <nav class="navbar navbar-light" style="margin-top: -25px;background-color: #5a1dc736" width="2000px">
-    <span class="navbar-brand text-center col-12 mx-auto" style="font-family: Helvetica; color: black; font-weight: bold; margin-left: 36%;">Doctor Management
+    <span class="navbar-brand text-center col-12 mx-auto"
+          style="font-family: Helvetica; color: black; font-weight: bold">DOCTOR MANAGEMENT PORTAL
     <img src="Views/doctor.jpg" width="40" height="40" class="d-inline-block align-top" alt=""></span>
-</nav><br>
+</nav>
+<br>
 <div class="row">
     <div class="container">
         <div class=" border bg-light col-8 mx-auto">
@@ -29,18 +31,18 @@
                 <br>
                 <div class="row">
                     <div class="col-4">
-                        First Name:
+                        First Name
                         <input type="text" id="firstName2" name="firstName2" class="form-control form-control-sm"
                                placeholder="First Name"></div>
                     <!-- LASTNAME -->
                     <div class="col-4">
-                        Last Name:
+                        Last Name
                         <input type="text" id="lastName2" name="lastName2" class="form-control form-control-sm"
                                placeholder="Last Name"></div>
                     <br>
                     <!-- GENDER -->
                     <div class="col-4">
-                        Gender:<br>
+                        Gender<br>
                         <div class="control">
                             <label class="radio">
                                 <input id="male" type="radio" name="gender" value="Male">
@@ -57,16 +59,16 @@
                 <div class="row">
                     <!-- EMAIL -->
                     <div class="col-4">
-                        Email:
+                        Email
                         <input type="email" id="email2" name="email2" class="form-control form-control-sm"
                                placeholder="Email"></div>
                     <!-- PASSWORD -->
                     <div class="col-4">
-                        Password:
+                        Password
                         <input type="password" id="password2" name="password2" class="form-control form-control-sm"
                                placeholder="Password"></div>
                     <div class="col-4">
-                        Confirm Password:
+                        Confirm Password
                         <input type="password" id="confPassword" name="confPassword"
                                class="form-control form-control-sm"
                                placeholder="Confirm Password"></div>
@@ -75,12 +77,12 @@
                 <div class="row">
                     <div class="col-6">
                         <!-- NIC -->
-                        NIC:
+                        NIC
                         <input type="text" id="NIC2" name="NIC2" class="form-control form-control-sm" placeholder="NIC">
                     </div>
                     <div class="col-6">
                         <!-- PHONE -->
-                        Contact Number:
+                        Contact Number
                         <input type="number" id="phone2" name="phone2" class="form-control form-control-sm"
                                placeholder="Phone"></div>
                     <br>
@@ -88,12 +90,12 @@
                 <div class="row">
                     <div class="col-6">
                         <!-- ADDRESS -->
-                        Address:
+                        Address
                         <input type="text" id="address2" name="address2" class="form-control form-control-sm"
                                placeholder="Address"></div>
                     <div class="col-6">
                         <!-- SPECIALIZATION -->
-                        Specialization:
+                        Specialization
                         <input type="text" id="specialization2" name="specialization2"
                                class="form-control form-control-sm"
                                placeholder="Specialization"></div>
@@ -102,7 +104,7 @@
                 <div class="row">
                     <div class="col-6">
                         <!-- JOINED DATE -->
-                        Joined Date:
+                        Joined Date
                         <%
                             GetDate todaydate = new GetDate();
                             out.print(todaydate.today());
@@ -110,7 +112,7 @@
                     </div>
                     <div class="col-6">
                         <!-- HOSPITAL ID -->
-                        Hospital ID:
+                        Hospital ID
                         <input type="number" id="hospital_id2" name="hospital_id2" class="form-control form-control-sm"
                                placeholder="Hospital ID"></div>
                     <br>
