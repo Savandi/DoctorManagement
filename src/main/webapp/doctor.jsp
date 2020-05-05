@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-light" style="margin-top: -25px;background-color: #5a1dc736">
+<nav class="navbar navbar-light" style="margin-top: -25px;background-color: #5a1dc736;>
     <span class="navbar-brand mx-auto" style="font-family: verdana; color: black; font-weight: bold; margin-left: 36%;">Doctor Management
     <img src="Views/doctor.jpg" width="40" height="40" class="d-inline-block align-top" alt=""></span>
 
@@ -86,7 +86,7 @@
                         <!-- PHONE -->
                         Contact Number:
                         <input type="number" id="phone2" name="phone2" class="form-control form-control-sm"
-                               placeholder="Phone" maxlength="11"></div>
+                               placeholder="Phone"></div>
                     <br>
                 </div>
                 <div class="row">
@@ -136,7 +136,7 @@
             <br>
         </div>
     </div>
-    <div class="col-12" id="divDoctorGrid" style="padding:4rem">
+    <div class="col-12" id="divDoctorGrid" style="padding:2rem">
         <%
             DoctorService doctorService2 = new DoctorService();
             out.print(doctorService2.readDoctors());
