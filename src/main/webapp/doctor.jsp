@@ -13,14 +13,10 @@
     <script src="Components/doctor.js"></script>
 </head>
 <body>
-
-<nav class="navbar navbar-light" style="margin-top: -25px;background-color: #5a1dc736;>
-    <span class="navbar-brand mx-auto" style="font-family: verdana; color: black; font-weight: bold; margin-left: 36%;">Doctor Management
+<nav class="navbar navbar-light" style="margin-top: -25px;background-color: #5a1dc736" width="2000px">
+    <span class="navbar-brand text-center col-12 mx-auto" style="font-family: Helvetica; color: black; font-weight: bold; margin-left: 36%;">Doctor Management
     <img src="Views/doctor.jpg" width="40" height="40" class="d-inline-block align-top" alt=""></span>
-
-</nav>
-<br>
-
+</nav><br>
 <div class="row">
     <div class="container">
         <div class=" border bg-light col-8 mx-auto">
@@ -144,7 +140,5 @@
     </div>
 
 </div>
-
-
 </body>
 </html>

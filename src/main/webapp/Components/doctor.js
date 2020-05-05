@@ -42,6 +42,7 @@ $(document).on("click", "#btnSave", function (event) {
 });
 
 function onDoctorSaveComplete(response, status) {
+
     if (status === "success") {
 
         var resultSet = JSON.parse(response);
@@ -99,18 +100,24 @@ function onDoctorDeleteComplete(response, status) {
 
             $("#alertSuccess").text("Successfully Deleted.");
             $("#alertSuccess").show();
+            $("#alertError").hide();
             $("#divDoctorGrid").html(resultSet.data);
+
 
         } else if (resultSet.status.trim() === "error") {
             $("#alertError").text(resultSet.data);
             $("#alertError").show();
+            $("#alertSuccess").hide();
+
         }
     } else if (status === "error") {
         $("#alertError").text("Error while deleting.");
         $("#alertError").show();
+        $("#alertSuccess").hide();
     } else {
         $("#alertError").text("Unknown error while deleting..");
         $("#alertError").show();
+        $("#alertSuccess").hide();
     }
 
 
@@ -118,6 +125,7 @@ function onDoctorDeleteComplete(response, status) {
 
 // UPDATE==========================================
 $(document).on("click", ".btnUpdate", function (event) {
+
     $("#hidDoctorIDSave").val($(this).closest("tr").find('#hidDoctorIDUpdate').val());
     $("#firstName2").val($(this).closest("tr").find('td:eq(1)').text());
     $("#lastName2").val($(this).closest("tr").find('td:eq(2)').text());

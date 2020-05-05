@@ -60,7 +60,7 @@ public class DoctorsAPI extends javax.servlet.http.HttpServlet {
         doctor.setJoinedDate((paras.get("joinedDate2").toString().replace("+", " ")));
         doctor.setPhone(Integer.parseInt((paras.get("phone2").toString().replace("+", " "))));
         doctor.setSpecialization((paras.get("specialization2").toString().replace("+", " ")));
-        doctor.setAddress((paras.get("address2").toString().replace("+", " ")));
+        doctor.setAddress((paras.get("address2").toString().replace("+", " ").replace("%2C", ",").replace("%2F", "/")));
         doctor.setNIC((paras.get("NIC2").toString().replace("+", " ")));
         doctor.setHospital_id(Integer.parseInt((paras.get("hospital_id2").toString().replace("+", " "))));
         String output = doctorService.updateDoctor(Integer.parseInt((paras.get("hidDoctorIDSave").toString().replace("+", " "))), doctor);
