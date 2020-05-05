@@ -180,7 +180,7 @@ function validateDoctorForm() {
     var regexEmail = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
 
     if (!(regexEmail.test($("#email2").val()))) {
-        return "Insert a valid email";
+        return "Insert a Valid Email";
     }
     // PASSWORD EMPTY CHECK
     if ($("#password2").val().trim() === "") {
@@ -199,10 +199,16 @@ function validateDoctorForm() {
     if ($("#NIC2").val().trim() === "") {
         return "Insert NIC";
     }
-    //CHECK NIC NUMBER LENGTH
+    //CHECK NIC NUMBER LENGTH AND PATTERN
+    var regexNIC = /^[0-9]{9}[vVxX]$/;
+
     if ($("#NIC2").val().length != 10) {
-        return "Enter a valid NIC number";
+        return "Enter a Valid NIC number";
     }
+    if (!(regexNIC.test($("#NIC2").val()))) {
+        return "Enter a Valid NIC number";
+    }
+
     // PHONE EMPTY CHECK
     if ($("#phone2").val().trim() === "") {
         return "Insert Contact Number";
