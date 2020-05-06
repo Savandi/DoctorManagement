@@ -1,6 +1,6 @@
 
-z
-java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¡¸Áäşÿÿÿÿ8á·ÖŞ.
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¦àíÓÿÿÿÿÿ8Â²Û‚.
 v
 java:S2293P"YReplace the type specification in this constructor call with the diamond operator ("<>").(«üÎŒ8ÌÄâı.
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¦àíÓÿÿÿÿÿ8Â²Û‚.
+z
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¡¸Áäşÿÿÿÿ8á·ÖŞ.

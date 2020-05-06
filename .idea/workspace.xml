@@ -53,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/Components/doctor.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="514">
-              <caret line="209" column="5" lean-forward="true" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
+              <caret line="209" column="5" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -175,17 +175,6 @@
               <item name="DoctorManagement" type="b2602c69:ProjectViewProjectNode" />
               <item name="DoctorManagement" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="DoctorManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DoctorManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DoctorManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DoctorManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -210,8 +199,8 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/Views" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.helthcare.HelthCare" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/Views" />
@@ -220,8 +209,9 @@
       <recent name="com.doctor.resources" />
       <recent name="com.doctor.model" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.helthcare.HelthCare" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/Views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -383,7 +373,7 @@
       <workItem from="1587031076964" duration="251000" />
       <workItem from="1587032697304" duration="1804000" />
       <workItem from="1587035394894" duration="152000" />
-      <workItem from="1588699597759" duration="4051000" />
+      <workItem from="1588699597759" duration="4270000" />
     </task>
     <task id="LOCAL-00001" summary="Doctor Management REST API creation">
       <created>1586978272642</created>
@@ -424,7 +414,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143930000" />
+    <option name="totallyTimeSpent" value="144149000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -449,7 +439,7 @@
       <window_info anchor="bottom" id="SonarLint" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292517" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.06394558" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.06394558" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.8435374" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -721,7 +711,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/Components/doctor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="514">
-          <caret line="209" column="5" lean-forward="true" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
+          <caret line="209" column="5" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
         </state>
       </provider>
     </entry>
