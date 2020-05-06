@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @WebServlet("/DoctorsAPI")
 public class DoctorsAPI extends javax.servlet.http.HttpServlet {
+
     private DoctorService doctorService = new DoctorService();
 
 

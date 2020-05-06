@@ -5,13 +5,14 @@ import java.util.ArrayList;
 
 public class DoctorIDValidate {
 
-    public static Integer generateDoctorIDs(ArrayList<Integer> arrayList){
+    //Static function to get an ID for doctor which is not already in DB
+    public static Integer generateDoctorIDs(ArrayList<Integer> arrayList) {
 
         int id;
         int next = arrayList.size();
         next++;
         id = next;
-        if(arrayList.contains(id)){
+        if (arrayList.contains(id)) {
             next++;
             id = next;
         }

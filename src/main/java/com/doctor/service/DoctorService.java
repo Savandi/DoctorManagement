@@ -8,6 +8,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+//Server side handling doctor management class
 public class DoctorService {
 
     private Connection con;
@@ -288,6 +289,7 @@ public class DoctorService {
     }
 
 
+    //function to get all doctors ID's currently present in DB
     private List<Integer> getDocID() throws SQLException {
         List<Integer> arrayList = null;
         try {
