@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @WebServlet("/DoctorsAPI")
 public class DoctorsAPI extends javax.servlet.http.HttpServlet {
-    DoctorService doctorService = new DoctorService();
+    private DoctorService doctorService = new DoctorService();
 
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {

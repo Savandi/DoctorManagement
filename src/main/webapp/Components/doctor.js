@@ -202,7 +202,7 @@ function validateDoctorForm() {
     //CHECK NIC NUMBER LENGTH AND PATTERN
     var regexNIC = /^[0-9]{9}[vVxX]$/;
 
-    if ($("#NIC2").val().length != 10) {
+    if ($("#NIC2").val().length !== 10) {
         return "Enter a Valid NIC number";
     }
     if (!(regexNIC.test($("#NIC2").val()))) {

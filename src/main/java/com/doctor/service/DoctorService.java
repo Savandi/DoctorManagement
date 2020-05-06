@@ -7,7 +7,6 @@ import com.doctor.utils.DoctorIDValidate;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class DoctorService {
 
