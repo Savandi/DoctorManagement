@@ -28,7 +28,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/doctor/service/DoctorService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="30">
               <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -40,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/doctor/webServlet/DoctorsAPI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+            <state relative-caret-position="90">
+              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/Components/doctor.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3030">
-              <caret line="202" column="38" lean-forward="true" selection-start-line="202" selection-start-column="38" selection-end-line="202" selection-end-column="38" />
+              <caret line="202" column="38" selection-start-line="202" selection-start-column="38" selection-end-line="202" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -62,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/ExportedDoctorDB/Doctor.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="113">
-              <caret line="36" column="38" lean-forward="true" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+              <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -70,7 +70,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/doctor/utils/DoctorDBConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
+            <state relative-caret-position="870">
               <caret line="61" column="74" selection-start-line="61" selection-start-column="74" selection-end-line="61" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -83,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/doctor/model/Doctor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -91,7 +91,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/doctor/resources/DoctorResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
+            <state relative-caret-position="1215">
               <caret line="94" column="43" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -206,7 +206,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,6 +217,11 @@
               <item name="DoctorManagement" type="b2602c69:ProjectViewProjectNode" />
               <item name="DoctorManagement" type="462c0819:PsiDirectoryNode" />
               <item name="ExportedDoctorDB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DoctorManagement" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DoctorManagement" type="462c0819:PsiDirectoryNode" />
+              <item name="GifDemo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DoctorManagement" type="b2602c69:ProjectViewProjectNode" />
@@ -280,6 +284,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -289,7 +294,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/Views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/GifDemo" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -476,6 +481,7 @@
       <workItem from="1587035394894" duration="152000" />
       <workItem from="1588699597759" duration="4270000" />
       <workItem from="1588743405577" duration="1419000" />
+      <workItem from="1588766701205" duration="229000" />
     </task>
     <task id="LOCAL-00001" summary="Doctor Management REST API creation">
       <created>1586978272642</created>
@@ -516,7 +522,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145568000" />
+    <option name="totallyTimeSpent" value="145797000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -529,9 +535,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="23" width="1440" height="827" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.85046726" visible="true" weight="0.32260373" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.85046726" visible="true" weight="0.32689556" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -541,7 +546,7 @@
       <window_info id="Web" order="7" sideWeight="0.1495327" side_tool="true" weight="0.22919708" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292517" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.06394558" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39183673" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.8435374" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -753,16 +758,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/doctor.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1935">
-          <caret line="129" column="23" selection-start-line="129" selection-start-column="23" selection-end-line="129" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/doctor/service/DoctorService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="30">
           <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -772,28 +770,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/doctor/webServlet/DoctorsAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        <state relative-caret-position="90">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Components/doctor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3030">
+          <caret line="202" column="38" selection-start-line="202" selection-start-column="38" selection-end-line="202" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/doctor/utils/DoctorDBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
+        <state relative-caret-position="870">
           <caret line="61" column="74" selection-start-line="61" selection-start-column="74" selection-end-line="61" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/doctor/resources/DoctorResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="94" column="43" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -803,21 +798,31 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/doctor/model/Doctor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Components/doctor.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/doctor/resources/DoctorResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3030">
-          <caret line="202" column="38" lean-forward="true" selection-start-line="202" selection-start-column="38" selection-end-line="202" selection-end-column="38" />
+        <state relative-caret-position="1215">
+          <caret line="94" column="43" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/doctor.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1935">
+          <caret line="129" column="23" selection-start-line="129" selection-start-column="23" selection-end-line="129" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ExportedDoctorDB/Doctor.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
-          <caret line="36" column="38" lean-forward="true" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
         </state>
       </provider>
     </entry>
