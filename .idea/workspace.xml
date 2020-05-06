@@ -6,9 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21a8ef34-5e9c-4d24-a83f-c4ae2c7194a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ExportedDoctorDB/Doctor.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ExportedDoctorDB/Doctor.sql" afterDir="false" />
-    </list>
+    <list default="true" id="21a8ef34-5e9c-4d24-a83f-c4ae2c7194a3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,7 +61,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ExportedDoctorDB/Doctor.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-427" />
+            <state relative-caret-position="113">
+              <caret line="36" column="38" lean-forward="true" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -475,7 +475,7 @@
       <workItem from="1587032697304" duration="1804000" />
       <workItem from="1587035394894" duration="152000" />
       <workItem from="1588699597759" duration="4270000" />
-      <workItem from="1588743405577" duration="871000" />
+      <workItem from="1588743405577" duration="1419000" />
     </task>
     <task id="LOCAL-00001" summary="Doctor Management REST API creation">
       <created>1586978272642</created>
@@ -516,7 +516,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145020000" />
+    <option name="totallyTimeSpent" value="145568000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -816,7 +816,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ExportedDoctorDB/Doctor.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-427" />
+        <state relative-caret-position="113">
+          <caret line="36" column="38" lean-forward="true" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+        </state>
       </provider>
     </entry>
   </component>
