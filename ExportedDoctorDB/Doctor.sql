@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 06, 2020 at 07:35 AM
+-- Generation Time: May 06, 2020 at 08:02 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.27
 
@@ -48,7 +48,7 @@ CREATE TABLE `regDoctors` (
 --
 
 INSERT INTO `regDoctors` (`doctor_id`, `firstName`, `lastName`, `gender`, `email`, `password`, `joinedDate`, `phone`, `specialization`, `address`, `NIC`, `hospital_id`) VALUES
-(1, 'Savandi', 'Subhartha', 'Female', 'savandi@gmail.com', '123', '2020-05-3', 889876788, 'ENT', 'No 27/6,Madiwela,Kotte', '988236738V', 2),
+(1, 'Savandi', 'Subhartha', 'Female', 'savandi@gmail.com', '123', '2020-05-03', 889876788, 'ENT', 'No 27/6,Madiwela,Kotte', '988236738V', 2),
 (2, 'Anne', 'Sofie', 'Female', 'anne123@gmail.com', '111', '2020-05-04', 778998722, 'HEART', 'No 10, 1st lane, Colombo 3', '988767876V', 1),
 (3, 'Tom', 'Marsh', 'Male', 'tom@outlook.com', '222', '2020-05-05', 77865670, 'Cardiologist', 'No 23, Mosque lane, Dehiwela', '987865676V', 9),
 (4, 'Natasha ', 'Peterson', 'Female', 'natz@outlook.com', '2525', '2020-05-05', 767845922, 'Gastroenterologist', '22/1, Temple Road, Kiribathgoda', '908789435V', 5),
